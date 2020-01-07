@@ -15,6 +15,12 @@
 		2E1E344723C3E54900AC8423 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1E344523C3E54900AC8423 /* LaunchScreen.storyboard */; };
 		2E1E345223C3E54900AC8423 /* Ghibli_HubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E345123C3E54900AC8423 /* Ghibli_HubTests.swift */; };
 		2E1E345E23C523D000AC8423 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E345D23C523D000AC8423 /* DetailViewController.swift */; };
+		2E1E346123C524B600AC8423 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E346023C524B600AC8423 /* NetworkHelper.swift */; };
+		2E1E346323C524DD00AC8423 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E346223C524DD00AC8423 /* AppError.swift */; };
+		2E1E346523C5252600AC8423 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E346423C5252600AC8423 /* API.swift */; };
+		2E1E346823C5256700AC8423 /* GhibModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E346723C5256700AC8423 /* GhibModel.swift */; };
+		2E1E346B23C525EF00AC8423 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E346A23C525EF00AC8423 /* UIViewController+Alert.swift */; };
+		2E1E346D23C5264500AC8423 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E346C23C5264500AC8423 /* UIImage+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +46,12 @@
 		2E1E345123C3E54900AC8423 /* Ghibli_HubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ghibli_HubTests.swift; sourceTree = "<group>"; };
 		2E1E345323C3E54900AC8423 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E1E345D23C523D000AC8423 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2E1E346023C524B600AC8423 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkHelper.swift; path = ../../../../NetworkHelper.swift; sourceTree = "<group>"; };
+		2E1E346223C524DD00AC8423 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppError.swift; path = ../../../../AppError.swift; sourceTree = "<group>"; };
+		2E1E346423C5252600AC8423 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.swift; path = ../../../../API.swift; sourceTree = "<group>"; };
+		2E1E346723C5256700AC8423 /* GhibModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GhibModel.swift; path = ../../../../GhibModel.swift; sourceTree = "<group>"; };
+		2E1E346A23C525EF00AC8423 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		2E1E346C23C5264500AC8423 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				2E1E345F23C523E500AC8423 /* New Group */,
+				2E1E346623C5253000AC8423 /* Model */,
+				2E1E346923C5257400AC8423 /* Extension */,
 				2E1E345C23C5221E00AC8423 /* View Controllers */,
 				2E1E344023C3E54500AC8423 /* Main.storyboard */,
 				2E1E344323C3E54900AC8423 /* Assets.xcassets */,
@@ -114,9 +128,31 @@
 		2E1E345F23C523E500AC8423 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				2E1E346023C524B600AC8423 /* NetworkHelper.swift */,
+				2E1E346223C524DD00AC8423 /* AppError.swift */,
+				2E1E346423C5252600AC8423 /* API.swift */,
 			);
 			name = "New Group";
 			path = "New Group/New Group";
+			sourceTree = "<group>";
+		};
+		2E1E346623C5253000AC8423 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2E1E346723C5256700AC8423 /* GhibModel.swift */,
+			);
+			name = Model;
+			path = "New Group/Model";
+			sourceTree = "<group>";
+		};
+		2E1E346923C5257400AC8423 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2E1E346A23C525EF00AC8423 /* UIViewController+Alert.swift */,
+				2E1E346C23C5264500AC8423 /* UIImage+Extension.swift */,
+			);
+			name = Extension;
+			path = "New Group/Model/Extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,10 +256,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E1E346B23C525EF00AC8423 /* UIViewController+Alert.swift in Sources */,
 				2E1E343F23C3E54500AC8423 /* ViewController.swift in Sources */,
 				2E1E343B23C3E54500AC8423 /* AppDelegate.swift in Sources */,
+				2E1E346323C524DD00AC8423 /* AppError.swift in Sources */,
+				2E1E346123C524B600AC8423 /* NetworkHelper.swift in Sources */,
 				2E1E343D23C3E54500AC8423 /* SceneDelegate.swift in Sources */,
+				2E1E346823C5256700AC8423 /* GhibModel.swift in Sources */,
+				2E1E346D23C5264500AC8423 /* UIImage+Extension.swift in Sources */,
 				2E1E345E23C523D000AC8423 /* DetailViewController.swift in Sources */,
+				2E1E346523C5252600AC8423 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
