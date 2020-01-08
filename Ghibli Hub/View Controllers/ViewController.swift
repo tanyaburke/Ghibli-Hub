@@ -45,7 +45,7 @@ class ViewController: UIViewController {
                     DispatchQueue.main.async{
                         self?.showAlert(title: "Unable to load moviess", message: "\(appError)")}
                 case .success(let dataArray):
-                    self?.movies = [dataArray]
+                    self?.movies = dataArray
                     dump(self!.movies)
                 }
             })

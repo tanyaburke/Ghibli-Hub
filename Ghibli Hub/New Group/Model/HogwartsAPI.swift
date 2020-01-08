@@ -1,16 +1,16 @@
 //
-//  API.swift
+//  HogwartsAPI.swift
 //  Ghibli Hub
 //
-//  Created by Tanya Burke on 1/7/20.
+//  Created by Tanya Burke on 1/8/20.
 //  Copyright © 2020 Tanya Burke. All rights reserved.
 //
 
 import Foundation
 
-struct MovieAPICLient {
+struct HogwartsAPICLient {
 
-static func fetchMovie(completion: @escaping (Result <[Movie],AppError>)->()){
+static func fetchMovie(completion: @escaping (Result <[Characters],AppError>)->()){
     
     let movieEndPointURLString = "https://ghibliapi.herokuapp.com/films"
     guard let url = URL(string: movieEndPointURLString) else {
@@ -26,9 +26,9 @@ static func fetchMovie(completion: @escaping (Result <[Movie],AppError>)->()){
             completion(.failure(.networkClientError(appError)))
         case .success(let data):
             do{
-                let movies = try
-                    JSONDecoder().decode([Movie].self, from: data)
-                completion(.success(movies))
+                let characters = try
+                    JSONDecoder().decode([Characters].self, from: data)
+                completion(.success(characters))
             }catch{
                 completion(.failure(.decodingError(error)))
                 
