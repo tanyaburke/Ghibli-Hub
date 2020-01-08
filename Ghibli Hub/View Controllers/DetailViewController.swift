@@ -10,21 +10,48 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
+    
+      @IBOutlet weak var elementImage: UIImageView!
+      @IBOutlet weak var detailLabel: UILabel!
+       
+      var movie: Movie?
+      
+      override func viewDidLoad() {
+          super.viewDidLoad()
 
-    /*
-    // MARK: - Navigation
+         loadDetails()
+          
+      }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+      
+      func loadDetails(){
+          guard let movie = movie else{
+              fatalError("unable to access passed information")
+          }
+        navigationItem.title = "\(movie.title)"
+        detailLabel.text = "Release Date: \(movie.releaseDate)\nDirector: \(movie.director)\nDescription: \(movie.description)"
+          
+        
+          
+//        let fullImageUrl = "\(movie)"
+//
+//          elementImage.getImage(with: fullImageUrl) {[weak self] (result) in
+//                  switch result{
+//                  case .failure:
+//                      DispatchQueue.main.sync{
+//                          self?.elementImage.image = UIImage(systemName: "exclamationmark.triangle")
+//
+//                      }
+//                  case .success(let image):
+//                      DispatchQueue.main.async {
+//                          self?.elementImage.image = image
+//
+//                      }
+//                  }
+//
+//              }
+//          }
+      
+}
 }
