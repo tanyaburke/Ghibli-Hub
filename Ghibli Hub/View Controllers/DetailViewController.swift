@@ -12,7 +12,7 @@ class DetailViewController: UIViewController {
 
     
     
-      @IBOutlet weak var elementImage: UIImageView!
+      @IBOutlet weak var movieImage: UIImageView!
       @IBOutlet weak var detailLabel: UILabel!
        
       var movie: Movie?
@@ -29,7 +29,7 @@ class DetailViewController: UIViewController {
           guard let movie = movie else{
               fatalError("unable to access passed information")
           }
-        navigationItem.title = "\(movie.title)"
+        navigationItem.title = "\(String(describing: movie.title))"
         detailLabel.text = "Release Date: \(movie.releaseDate)\nDirector: \(movie.director)\nDescription: \(movie.description)"
           
         

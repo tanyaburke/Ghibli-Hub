@@ -18,6 +18,8 @@
 		2E1E346823C5256700AC8423 /* GhibModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E346723C5256700AC8423 /* GhibModel.swift */; };
 		2E1E346B23C525EF00AC8423 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E346A23C525EF00AC8423 /* UIViewController+Alert.swift */; };
 		2E1E346D23C5264500AC8423 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E346C23C5264500AC8423 /* UIImage+Extension.swift */; };
+		2E59DF8F23C6455200B22A57 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59DF8E23C6455200B22A57 /* Music.swift */; };
+		2E59DF9123C6467700B22A57 /* arthur-vyncke-snow-and-magic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2E59DF9023C6467700B22A57 /* arthur-vyncke-snow-and-magic.mp3 */; };
 		2ECF0BDC23C5624100F72CE5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECF0BDB23C5624100F72CE5 /* API.swift */; };
 		2ECF0BDE23C5625600F72CE5 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECF0BDD23C5625600F72CE5 /* NetworkHelper.swift */; };
 		2ECF0BE023C5629E00F72CE5 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECF0BDF23C5629E00F72CE5 /* AppError.swift */; };
@@ -49,6 +51,8 @@
 		2E1E346723C5256700AC8423 /* GhibModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GhibModel.swift; path = ../../../../GhibModel.swift; sourceTree = "<group>"; };
 		2E1E346A23C525EF00AC8423 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		2E1E346C23C5264500AC8423 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		2E59DF8E23C6455200B22A57 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		2E59DF9023C6467700B22A57 /* arthur-vyncke-snow-and-magic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "arthur-vyncke-snow-and-magic.mp3"; sourceTree = "<group>"; };
 		2ECF0BDB23C5624100F72CE5 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.swift; path = "Ghibli Hub/New Group/Model/API.swift"; sourceTree = SOURCE_ROOT; };
 		2ECF0BDD23C5625600F72CE5 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkHelper.swift; path = "Ghibli Hub/New Group/Model/NetworkHelper.swift"; sourceTree = SOURCE_ROOT; };
 		2ECF0BDF23C5629E00F72CE5 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppError.swift; path = "Ghibli Hub/New Group/Model/AppError.swift"; sourceTree = SOURCE_ROOT; };
@@ -93,9 +97,10 @@
 		2E1E343923C3E54500AC8423 /* Ghibli Hub */ = {
 			isa = PBXGroup;
 			children = (
-				2E1E345F23C523E500AC8423 /* Network files */,
+				2E1E345F23C523E500AC8423 /* NetworkFiles */,
 				2E1E346623C5253000AC8423 /* Model */,
 				2E1E346923C5257400AC8423 /* Extension */,
+				2E59DF9223C646A600B22A57 /* Music Files */,
 				2E1E345C23C5221E00AC8423 /* View Controllers */,
 				2E1E344023C3E54500AC8423 /* Main.storyboard */,
 				2E1E344323C3E54900AC8423 /* Assets.xcassets */,
@@ -125,15 +130,15 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		2E1E345F23C523E500AC8423 /* Network files */ = {
+		2E1E345F23C523E500AC8423 /* NetworkFiles */ = {
 			isa = PBXGroup;
 			children = (
 				2ECF0BDB23C5624100F72CE5 /* API.swift */,
 				2ECF0BDD23C5625600F72CE5 /* NetworkHelper.swift */,
 				2ECF0BDF23C5629E00F72CE5 /* AppError.swift */,
 			);
-			name = "Network files";
-			path = "New Group/Network files";
+			name = NetworkFiles;
+			path = "New Group/NetworkFiles";
 			sourceTree = "<group>";
 		};
 		2E1E346623C5253000AC8423 /* Model */ = {
@@ -153,6 +158,15 @@
 			);
 			name = Extension;
 			path = "New Group/Model/Extension";
+			sourceTree = "<group>";
+		};
+		2E59DF9223C646A600B22A57 /* Music Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E59DF8E23C6455200B22A57 /* Music.swift */,
+				2E59DF9023C6467700B22A57 /* arthur-vyncke-snow-and-magic.mp3 */,
+			);
+			path = "Music Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +252,7 @@
 			files = (
 				2E1E344723C3E54900AC8423 /* LaunchScreen.storyboard in Resources */,
 				2E1E344423C3E54900AC8423 /* Assets.xcassets in Resources */,
+				2E59DF9123C6467700B22A57 /* arthur-vyncke-snow-and-magic.mp3 in Resources */,
 				2E1E344223C3E54500AC8423 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +278,7 @@
 				2E1E343B23C3E54500AC8423 /* AppDelegate.swift in Sources */,
 				2E1E343D23C3E54500AC8423 /* SceneDelegate.swift in Sources */,
 				2E1E346823C5256700AC8423 /* GhibModel.swift in Sources */,
+				2E59DF8F23C6455200B22A57 /* Music.swift in Sources */,
 				2E1E346D23C5264500AC8423 /* UIImage+Extension.swift in Sources */,
 				2ECF0BDC23C5624100F72CE5 /* API.swift in Sources */,
 				2E1E345E23C523D000AC8423 /* DetailViewController.swift in Sources */,

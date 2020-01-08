@@ -39,13 +39,13 @@ class ViewController: UIViewController {
         }
         
         private func loadMovie(){
-            MovieAPICLient.fetchElement(completion: {[weak self] (result) in
+            MovieAPICLient.fetchMovie(completion: {[weak self] (result) in
                 switch result{
                 case .failure(let appError):
                     DispatchQueue.main.async{
                         self?.showAlert(title: "Unable to load moviess", message: "\(appError)")}
                 case .success(let dataArray):
-                    self?.movies = dataArray
+                    self?.movies = [dataArray]
                     dump(self!.movies)
                 }
             })
@@ -67,11 +67,8 @@ class ViewController: UIViewController {
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "elementCell", for: indexPath) as? TableViewCell else{
-                fatalError("could not access PodCastCell")
-            }
-            let element = movies[indexPath.row]
-            cell.configureCell(element: element)
+          let cell = tableView.dequeueReusableCell(withIdentifier: "ghibliCell", for: indexPath)
+           
             return cell
         }
         
