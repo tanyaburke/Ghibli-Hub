@@ -20,7 +20,7 @@ class MusicPlayer: UIViewController {
     var audioPlayer: AVAudioPlayer?
     
     func startBackgroundMusic() {
-        if let bundle = Bundle.main.path(forResource: "arthur-vyncke-snow-and-magic", ofType: "mp3") {
+        if let bundle = Bundle.main.path(forResource: "Harry Potter Theme Song", ofType: "mp3") {
             let backgroundMusic = NSURL(fileURLWithPath: bundle)
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf:backgroundMusic as URL)

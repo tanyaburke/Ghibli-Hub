@@ -10,48 +10,49 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var characterImage: UIImageView!
     
     
-      @IBOutlet weak var movieImage: UIImageView!
       @IBOutlet weak var detailLabel: UILabel!
        
-      var movie: Movie?
+    @IBOutlet weak var backgroundImage: UIImageView!
+    
+    var character: Characters?
       
       override func viewDidLoad() {
           super.viewDidLoad()
-
+        
          loadDetails()
-          
+        backgroundImage.loadGif(name: "clouds")
       }
 
       
       func loadDetails(){
-          guard let movie = movie else{
+          guard let character = character else{
               fatalError("unable to access passed information")
           }
-        navigationItem.title = "\(String(describing: movie.title))"
-        detailLabel.text = "Release Date: \(movie.releaseDate)\nDirector: \(movie.director)\nDescription: \(movie.description)"
+        navigationItem.title = "\(String(describing: character.name))"
+        detailLabel.text = "Actor: \(character.actor)\nAncestry: \(character.ancestry)\nHouse: \(character.house)"
           
         
           
-//        let fullImageUrl = "\(movie)"
-//
-//          elementImage.getImage(with: fullImageUrl) {[weak self] (result) in
-//                  switch result{
-//                  case .failure:
-//                      DispatchQueue.main.sync{
-//                          self?.elementImage.image = UIImage(systemName: "exclamationmark.triangle")
-//
-//                      }
-//                  case .success(let image):
-//                      DispatchQueue.main.async {
-//                          self?.elementImage.image = image
-//
-//                      }
-//                  }
-//
-//              }
-//          }
+
+        characterImage.getImage(with: character.image) {[weak self] (result) in
+                  switch result{
+                  case .failure:
+                      DispatchQueue.main.sync{
+                          self?.characterImage.image = UIImage(systemName: "exclamationmark.triangle")
+
+                      }
+                  case .success(let image):
+                      DispatchQueue.main.async {
+                          self?.characterImage.image = image
+
+                      }
+                  }
+
+              }
+          }
       
 }
-}
+
